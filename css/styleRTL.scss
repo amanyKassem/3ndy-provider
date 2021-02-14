@@ -36,11 +36,6 @@ body {
   margin-left: 1rem!important;
 }
 
-.mr-4, .mx-4 {
-  margin-right: 0!important;
-  margin-left: 1.5rem!important;
-}
-
 .mr-md-2, .mx-md-2 {
   margin-right: 0!important;
   margin-left: .5rem!important;
@@ -61,6 +56,11 @@ form {
     .form-control {
       text-align: left;
       padding: 0 25px 0 0;
+    }
+
+    .locImg {
+      right: 15px;
+      left: auto;
     }
 
   }
@@ -167,6 +167,12 @@ header {
 
 
 .providers {
+
+  .btnsBlock {
+    right: 0;
+    left: auto;
+  }
+
   .providersBlock {
     .provider {
       .fa-heart {
@@ -256,7 +262,51 @@ footer {
   }
 }
 
-@media(max-width: 767px) {
+.subscription{
+  .subscribeBlock {
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
+
+      .filter-option-inner {
+        .selectImg {
+          margin-right: 5px;
+          margin-left: 0;
+        }
+
+      }
+
+    }
+
+    .plan {
+      .bankImage {
+        margin-right: 150px;
+        margin-left: 0;
+      }
+      .triangle {
+        right: 0;
+        left: auto;
+        border-left: 33px solid transparent;
+        border-right: 0;
+      }
+
+      &.active , &:hover{
+
+        .triangle {
+          border-left: 33px solid transparent;
+          border-right:0;
+        }
+
+      }
+
+      i {
+        right: 5px;
+        left: auto;
+      }
+    }
+
+  }
+}
+
+  @media(max-width: 767px) {
 
   header{
     .menu {
@@ -323,6 +373,16 @@ footer {
     .shapeMsg {
       .msgBlock {
         margin-left: 0;
+      }
+    }
+  }
+
+  .subscription {
+    .subscribeBlock {
+      .plan {
+        .bankImage {
+          margin-right: 60px;
+        }
       }
     }
   }

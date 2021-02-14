@@ -61,6 +61,16 @@ form .form-group label {
   font-size: 16px;
   margin-bottom: 0;
 }
+form .form-group .locImg {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  z-index: 1;
+  font-size: 18px;
+}
+form .form-group .locImg .fa-map-marker-alt {
+  color: #2D489C;
+}
 form .form-group .form-control {
   position: relative;
   z-index: 1;
@@ -115,6 +125,32 @@ form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-
 form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
 form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hover {
   border-radius: 0;
+}
+
+.searchCont {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+.searchCont #searchTextField {
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 15px 10px 30px;
+  width: 270px;
+  font-size: 15px;
+  color: #7e8082;
+  outline: 0;
+}
+.searchCont #searchTextField:focus {
+  outline: 0;
+}
+.searchCont .icon-search {
+  color: #7e8082;
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 textarea {
@@ -215,6 +251,12 @@ ul {
   border-color: #fff;
   background-color: #3e95b9;
   color: #fff;
+}
+.roseBtn.getLoc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .mainTitle {
@@ -1327,6 +1369,51 @@ header .menu .lang img {
   cursor: pointer;
   z-index: 1;
 }
+.profileBlock .editPassBlock form .changeImg.payForm .change {
+  border-radius: 0;
+  width: 75px;
+  height: 75px;
+  padding: 0;
+  border: 0;
+}
+.profileBlock .editPassBlock form .changeImg.payForm .change:after {
+  content: none;
+}
+.profileBlock .editPassBlock form .changeImg.serviceImg .change {
+  border-radius: 10px;
+  padding: 0;
+  border: 1px solid #a7a7a7;
+  width: 125px;
+  height: 135px;
+}
+.profileBlock .editPassBlock form .changeImg.serviceImg .change:after {
+  content: none;
+}
+.profileBlock .editPassBlock form .changeImg.serviceImg .change .fa-plus {
+  color: #a7a7a7;
+}
+.profileBlock .editPassBlock form .selectServ {
+  justify-content: space-between;
+  align-items: center;
+  color: #FF8BBC;
+  border: 1px solid #FF8BBC;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 35px 0;
+}
+.profileBlock .editPassBlock form .selectServ i {
+  color: #a7a7a7;
+  font-size: 20px;
+}
+.profileBlock .editPassBlock form .selectServ.additions {
+  color: #7e8082;
+  border-color: #7e8082;
+  margin: 15px 0 55px;
+}
 .profileBlock .editPassBlock form .form-group label {
   color: #2e489c;
 }
@@ -1391,6 +1478,75 @@ header .menu .lang img {
   -o-box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.18);
   border-radius: 15px;
   padding: 40px 100px;
+  margin-top: 35px;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle {
+  width: 100%;
+  height: 55px;
+  font-size: 17px;
+  background-color: #ffffff;
+  color: #FF8BBC;
+  border-color: #FF8BBC;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder, .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:active, .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:focus,
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
+.subscription .subscribeBlock .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hover {
+  background: #fff;
+  color: #1c1b1c;
+  font-size: 14px;
+  height: 100%;
+  border: 1px solid #f6f6f6;
+  box-shadow: none;
+  outline: 0 !important;
+  border-radius: 7px;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle:focus, .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > select.mobile-device:focus + .dropdown-toggle, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-toggle:focus, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle > select.mobile-device:focus + .dropdown-toggle {
+  outline: none !important;
+  outline-offset: 0;
+  background-color: #f6f6f6;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle::after, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-toggle::after {
+  border-top: 0.3em solid #000;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option-inner, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .filter-option-inner {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option-inner .selectImg, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .filter-option-inner .selectImg {
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu {
+  padding: 0;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item.active, .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:active, .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:focus, .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:hover, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item.active, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:active, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:focus, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:hover {
+  background-color: #f8f8f8;
+  color: #2D2D2D;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item .text img, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item .text img {
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu li {
+  border-bottom: 1px solid #d6d6d6;
+  text-align: right;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li:last-child, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu li:last-child {
+  border: 0;
+}
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li a, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .dropdown-menu li a {
+  padding: 10px;
+}
+.subscription .subscribeBlock .chooseBank {
+  color: #2D2D2D;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 .subscription .subscribeBlock .plan {
   position: relative;
@@ -1406,6 +1562,7 @@ header .menu .lang img {
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 .subscription .subscribeBlock .plan i {
   font-size: 12px;
@@ -1453,6 +1610,23 @@ header .menu .lang img {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 0;
+}
+.subscription .subscribeBlock .plan .bankImage {
+  width: 80px;
+  margin-left: 150px;
+}
+.subscription .subscribeBlock .plan .bankInfo {
+  flex: 1;
+}
+.subscription .subscribeBlock .plan .bankInfo h5 {
+  color: #2D489C;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.subscription .subscribeBlock .plan .bankInfo h5 span {
+  color: #7e8082;
+  display: inline-block;
+  width: 150px;
 }
 
 /* end subscription */
@@ -1658,6 +1832,22 @@ footer .bottomFooter a:hover {
     height: 45px;
     padding: 10px 10px;
     font-size: 13px;
+  }
+  form .form-group .locImg {
+    font-size: 15px;
+  }
+
+  .searchCont {
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+  }
+  .searchCont #searchTextField {
+    height: 35px;
+    width: 100%;
+    font-size: 14px;
   }
 
   header {
@@ -1929,6 +2119,21 @@ footer .bottomFooter a:hover {
   .profileBlock .editPassBlock form .changeImg .change .fa-plus {
     font-size: 15px;
   }
+  .profileBlock .editPassBlock form .changeImg.serviceImg .change {
+    width: 95px;
+    height: 95px;
+  }
+  .profileBlock .editPassBlock form .changeImg.payForm .change {
+    width: 65px;
+    height: 65px;
+  }
+  .profileBlock .editPassBlock form .selectServ {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  .profileBlock .editPassBlock form .selectServ i {
+    font-size: 15px;
+  }
   .profileBlock .profileCard {
     width: 100%;
   }
@@ -1998,6 +2203,45 @@ footer .bottomFooter a:hover {
     width: 45%;
     margin-bottom: 25px;
   }
+
+  .subscription .subscribeBlock {
+    width: 100%;
+    padding: 25px 20px;
+    margin-top: 35px;
+  }
+  .subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle {
+    height: 50px;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .subscription .subscribeBlock .chooseBank {
+    font-size: 16px;
+  }
+  .subscription .subscribeBlock .plan {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .subscription .subscribeBlock .plan .info .title {
+    font-size: 16px;
+    text-align: center;
+  }
+  .subscription .subscribeBlock .plan .info .time {
+    text-align: center;
+  }
+  .subscription .subscribeBlock .plan .price {
+    margin: 10px auto 0;
+    font-size: 20px;
+  }
+  .subscription .subscribeBlock .plan .bankImage {
+    width: 40px;
+    margin: 0 auto 20px !important;
+  }
+  .subscription .subscribeBlock .plan .bankInfo h5 {
+    font-size: 15px;
+  }
+  .subscription .subscribeBlock .plan .bankInfo h5 span {
+    width: 110px;
+  }
 }
 /*Small Screen*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2060,6 +2304,15 @@ footer .bottomFooter a:hover {
 
   .introImg {
     margin-top: 120px;
+  }
+
+  .subscription .subscribeBlock {
+    border-radius: 15px;
+    padding: 40px;
+  }
+  .subscription .subscribeBlock .plan .bankImage {
+    width: 60px;
+    margin-left: 60px;
   }
 }
 /*Medium Screen*/

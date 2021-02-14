@@ -73,6 +73,17 @@ form {
       margin-bottom: 0;
     }
 
+    .locImg{
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      z-index: 1;
+      font-size: 18px;
+      .fa-map-marker-alt{
+        color: $blue;
+      }
+    }
+
     .form-control {
       position: relative;
       z-index: 1;
@@ -140,6 +151,32 @@ form {
 
   }
 
+}
+
+.searchCont{
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  #searchTextField {
+    border: 0;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px 15px 10px 30px;
+    width: 270px;
+    font-size: 15px;
+    color: $midGray;
+    outline: 0;
+    &:focus{
+      outline: 0;
+    }
+  }
+  .icon-search{
+    color: $midGray;
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 textarea{
@@ -241,6 +278,13 @@ ul {
       background-color: $babyBlue;
       color: #fff;
     }
+  }
+
+  &.getLoc{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 }
 
@@ -1559,6 +1603,65 @@ header {
             z-index: 1;
           }
         }
+
+
+        &.payForm{
+          .change {
+            border-radius: 0;
+            width: 75px;
+            height: 75px;
+            padding: 0;
+            border: 0;
+            &:after{
+              content: none;
+            }
+          }
+        }
+
+        &.serviceImg{
+          .change {
+            border-radius: 10px;
+            padding: 0;
+            border: 1px solid $lightGray;
+            width: 125px;
+            height: 135px;
+            &:after{
+              content: none;
+            }
+
+            .fa-plus {
+              color: $lightGray;
+            }
+
+          }
+        }
+
+      }
+
+
+      .selectServ{
+        justify-content: space-between;
+        align-items: center;
+        color: $rose;
+        border: 1px solid $rose;
+        border-radius: 10px;
+        height: 50px;
+        width: 100%;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 17px;
+        margin: 35px 0;
+
+        i{
+          color: $lightGray;
+          font-size: 20px;
+        }
+
+        &.additions{
+          color: $midGray;
+          border-color: $midGray;
+          margin: 15px 0 55px;
+        }
       }
 
       .form-group {
@@ -1644,6 +1747,93 @@ header {
     -o-box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.18);
     border-radius: 15px;
     padding: 40px 100px;
+    margin-top: 35px;
+
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
+      width: 100%;
+      height: 55px;
+      font-size: 17px;
+      background-color: #ffffff;
+      color: $rose;
+      border-color: $rose;
+      border-radius: 10px;
+      margin-bottom: 30px;
+
+      > .dropdown-toggle.bs-placeholder, > .dropdown-toggle.bs-placeholder:active, > .dropdown-toggle.bs-placeholder:focus,
+      > .dropdown-toggle.bs-placeholder:hover {
+        background: #fff;
+        color: #1c1b1c;
+        font-size: 14px;
+        height: 100%;
+        border: 1px solid #f6f6f6;
+        box-shadow: none;
+        outline: 0 !important;
+        border-radius: 7px;
+      }
+
+      .dropdown-toggle:focus, > select.mobile-device:focus + .dropdown-toggle {
+        outline: none !important;
+        outline-offset: 0;
+        background-color: #f6f6f6;
+      }
+
+      .dropdown-toggle::after {
+        border-top: .3em solid #000;
+      }
+
+      .filter-option-inner {
+        height: 100%;
+        align-items: center;
+        display: flex;
+
+        .selectImg{
+          height: 25px;
+          width: 25px;
+          margin-left: 5px;
+        }
+
+      }
+
+      .dropdown-menu {
+        padding: 0;
+
+        .dropdown-item{
+          &.active, &:active ,  &:focus, &:hover {
+            background-color: #f8f8f8;
+            color: $black;
+          }
+
+          .text{
+            img{
+              height: 25px;
+              width: 25px;
+              margin-left: 5px;
+            }
+          }
+        }
+
+        li {
+          border-bottom: 1px solid #d6d6d6;
+          text-align: right;
+
+          &:last-child {
+            border: 0;
+          }
+
+          a {
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .chooseBank{
+      color: $black;
+      font-size: 18px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
 
     .plan{
 
@@ -1660,6 +1850,7 @@ header {
       -moz-transition: all 0.5s ease-in-out;
       -webkit-transition: all 0.5s ease-in-out;
       overflow: hidden;
+      flex-wrap: wrap;
 
       i{
         font-size: 12px;
@@ -1713,6 +1904,24 @@ header {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 0;
+      }
+
+      .bankImage{
+        width: 80px;
+        margin-left: 150px;
+      }
+      .bankInfo{
+        flex: 1;
+        h5{
+          color: $blue;
+          font-size: 18px;
+          margin-bottom: 10px;
+          span{
+            color: $midGray;
+            display: inline-block;
+            width: 150px;
+          }
+        }
       }
 
     }
@@ -1966,9 +2175,28 @@ footer{
         padding: 10px 10px;
         font-size: 13px;
       }
+
+      .locImg {
+        font-size: 15px;
+      }
+
     }
 
   }
+
+  .searchCont {
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+    #searchTextField {
+      height: 35px;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
 
   header {
     height: 70px;
@@ -2305,6 +2533,29 @@ footer{
             }
 
           }
+
+          &.serviceImg {
+            .change {
+              width: 95px;
+              height: 95px;
+            }
+          }
+          &.payForm {
+            .change {
+              width: 65px;
+              height: 65px;
+            }
+          }
+        }
+
+        .selectServ {
+          padding: 10px 10px;
+          font-size: 14px;
+
+          i {
+            font-size: 15px;
+          }
+
         }
 
       }
@@ -2401,6 +2652,57 @@ footer{
     }
   }
 
+  .subscription {
+    .subscribeBlock {
+      width: 100%;
+      padding: 25px 20px;
+      margin-top: 35px;
+
+      .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
+        height: 50px;
+        font-size: 15px;
+        margin-bottom: 25px;
+      }
+
+      .chooseBank {
+        font-size: 16px;
+      }
+
+      .plan{
+        flex-direction: column;
+        justify-content: center;
+
+        .info {
+          .title {
+            font-size: 16px;text-align: center;
+          }
+          .time{
+            text-align: center;
+          }
+        }
+
+        .price {
+          margin: 10px auto 0;
+          font-size: 20px;
+        }
+
+        .bankImage {
+          width: 40px;
+          margin: 0 auto 20px !important;
+        }
+        .bankInfo {
+          h5 {
+            font-size: 15px;
+            span {
+              width: 110px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
 }
 
 /*Small Screen*/
@@ -2493,6 +2795,21 @@ footer{
 
   .introImg {
     margin-top: 120px;
+  }
+
+  .subscription {
+    .subscribeBlock {
+      border-radius: 15px;
+      padding: 40px;
+
+      .plan {
+        .bankImage {
+          width: 60px;
+          margin-left: 60px;
+        }
+      }
+
+    }
   }
 
 }

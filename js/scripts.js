@@ -71,6 +71,12 @@ $(document).ready(function () {
     });
 
 
+    // get map location
+    $(".getLoc").click(function () {
+        let value = $("#searchTextField").val();
+        $("#ServLocation").val(value);
+    });
+
 
     //scroll top
     var scrollButton = $("#scroll-top");

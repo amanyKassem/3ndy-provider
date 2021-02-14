@@ -27,11 +27,6 @@ body {
   margin-left: 1rem !important;
 }
 
-.mr-4, .mx-4 {
-  margin-right: 0 !important;
-  margin-left: 1.5rem !important;
-}
-
 .mr-md-2, .mx-md-2 {
   margin-right: 0 !important;
   margin-left: 0.5rem !important;
@@ -50,6 +45,10 @@ body {
 form .form-group .form-control {
   text-align: left;
   padding: 0 25px 0 0;
+}
+form .form-group .locImg {
+  right: 15px;
+  left: auto;
 }
 
 .authForm form .form-group .fa-check {
@@ -112,6 +111,10 @@ header .menu .lang img {
   right: 0;
 }
 
+.providers .btnsBlock {
+  right: 0;
+  left: auto;
+}
 .providers .providersBlock .provider .fa-heart {
   right: 15px;
   left: auto;
@@ -155,6 +158,29 @@ footer .bottomFooter a {
   margin-right: 0;
 }
 
+.subscription .subscribeBlock .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option-inner .selectImg, .subscription .subscribeBlock .bootstrap-select > .dropdown-toggle .filter-option-inner .selectImg {
+  margin-right: 5px;
+  margin-left: 0;
+}
+.subscription .subscribeBlock .plan .bankImage {
+  margin-right: 150px;
+  margin-left: 0;
+}
+.subscription .subscribeBlock .plan .triangle {
+  right: 0;
+  left: auto;
+  border-left: 33px solid transparent;
+  border-right: 0;
+}
+.subscription .subscribeBlock .plan.active .triangle, .subscription .subscribeBlock .plan:hover .triangle {
+  border-left: 33px solid transparent;
+  border-right: 0;
+}
+.subscription .subscribeBlock .plan i {
+  right: 5px;
+  left: auto;
+}
+
 @media (max-width: 767px) {
   header .menu {
     text-align: left;
@@ -193,6 +219,10 @@ footer .bottomFooter a {
 @media (min-width: 768px) and (max-width: 991px) {
   .aboutSite .shapeMsg .msgBlock {
     margin-left: 0;
+  }
+
+  .subscription .subscribeBlock .plan .bankImage {
+    margin-right: 60px;
   }
 }
 
