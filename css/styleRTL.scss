@@ -20,6 +20,15 @@ body {
   left: auto;
 }
 
+.slideInRight {
+  animation-name: slideInLeft;
+}
+
+.slideInLeft {
+  animation-name: slideInRight;
+}
+
+
 
 .mr-1, .mx-1 {
   margin-right: 0!important;
